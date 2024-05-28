@@ -1,0 +1,12 @@
+A Singleton egy tervezési minta, amit arra használunk hogy 1 objektumból
+csak 1 (vagy megadott számú) példányunk lehessen.
+
+Adatbázis elérésnél például felesleges mindig új osztályt példányosítani
+ami kezeli a kapcsolatokat. Helyette készül 1 példány amit aztán globálisan mindenki elérhet.
+
+Ehez a konstruktor elérhetőségét kell korlátozzuk protected-re vagy private-re.
+Egy statikus instance metódussal példányosítjuk az osztályt, ami megvizsgálja,
+hogy létezik-e már az osztály. Magát a példányt egy külön private adattagban tároljuk,
+ami ha még nem létezik, az instance metódus létrehozza. Ha létezik akkor visszaadja azt.
+Ezen keresztül minden további metódus elérhető lesz amit az osztály definiál.
+
